@@ -1,7 +1,20 @@
+import 'package:budget_men/sign_up_page.dart';
+import 'package:budget_men/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+   // home: WelcomeScreen(),
+   theme: ThemeData(
+    primaryColor: Colors.redAccent,
+    primarySwatch: Colors.red,
+   ),
+   initialRoute: '/',
+    routes: {
+      '/':(context) => WelcomeScreen(),
+       '/sign_up':(context) => SignUpPage(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
